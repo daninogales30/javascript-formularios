@@ -66,26 +66,31 @@
 
             if(nombre == ""){
                 document.getElementById("errores").textContent = "Porfavor, no deje el nombre en blanco";
+                document.getElementById("name").focus();
                 return false;
             }
 
             if(!expRegCorreo.test(correo)){
                 document.getElementById("errores").textContent = "El correo electrónico no es válido";
+                document.getElementById("email").focus();
                 return false;
             }
 
             if(!expRegPassword.test(password1)){
                 document.getElementById("errores").textContent = "La contraseña no es válida";
+                document.getElementById("password").focus();
                 return false;
             }
 
             if(password1 != password2){
                 document.getElementById("errores").textContent = "Las contraseñas no coinciden";
+                document.getElementById("password2").focus();
                 return false;
             }
 
             if(bot != 11){
                 document.getElementById("errores").textContent = "Eres un bot, responde bien la suma pichita";
+                document.getElementById("bot").focus();
                 return false;
             }
             return true;
